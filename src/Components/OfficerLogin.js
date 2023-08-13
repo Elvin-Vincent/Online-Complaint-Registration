@@ -1,10 +1,10 @@
-import React from 'react';
+import React from "react";
 
 const OfficerLogin = ({ onOfficerLogin }) => {
   return (
     <div>
       {/* Add your Officer Login form or content here */}
-      <button >Officer Login</button>
+      <button>Officer Login</button>
       <h1>hi</h1>
     </div>
   );

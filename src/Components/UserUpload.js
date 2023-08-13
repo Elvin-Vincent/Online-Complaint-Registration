@@ -1,5 +1,5 @@
-import React, { useRef } from 'react';
-import './Upload.css';
+import React, { useRef } from "react";
+import "./Upload.css";
 
 const UserUpload = () => {
   const fileInputRef = useRef(null);
@@ -10,7 +10,7 @@ const UserUpload = () => {
 
   const handleFileChange = (event) => {
     const file = event.target.files[0];
-    console.log('Selected file:', file);
+    console.log("Selected file:", file);
 
     // Add your file handling logic here (e.g., upload the file, read its content, etc.)
   };
@@ -31,7 +31,7 @@ const UserUpload = () => {
       <input
         ref={fileInputRef}
         type="file"
-        style={{ display: 'none' }}
+        style={{ display: "none" }}
         onChange={handleFileChange}
       />
     </div>
