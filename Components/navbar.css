@@ -1,0 +1,292 @@
+/* navbar.css */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Jost", sans-serif;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+  font-size: 1.8rem;
+}
+
+.main-nav {
+  width: 100%;
+  height: 10rem;
+  display: grid;
+  background-color: #ffffff;
+  grid-template-columns: 10rem 1fr 2fr 1fr 10rem;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+}
+
+.heading {
+  display: grid;
+  grid-column: 1/3;
+  color: green;
+  text-transform: uppercase;
+  justify-content: start;
+  align-items: center;
+  font-size: 2rem;
+  margin-left: 1rem;
+}
+
+.navmenu {
+  grid-column: 3/5;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.navmenu ul {
+  height: 10rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-right: 3rem;
+}
+
+.navmenu ul li {
+  display: inline-block;
+  margin-right: 2rem;
+}
+
+.navmenu ul li a {
+  color: #ee1044;
+  font-size: 2rem;
+  text-transform: uppercase;
+  transition: color 0.3s ease;
+  position: relative;
+}
+
+.navmenu ul li a:hover {
+  color: #007bff;
+}
+
+.navmenu ul li a::before {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #ee1044;
+  transform: scaleX(0);
+  transform-origin: bottom left;
+  transition: transform 0.3s ease;
+}
+
+.navmenu ul li a:hover::before {
+  transform: scaleX(1);
+}
+
+.button {
+  padding: 0.5rem 1.5rem;
+  background-color:transparent;
+  color: #ee1044;
+  font-size: 2.5rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: #c8e26c;
+}
+
+.discription {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 5rem;
+  max-width: 500px;
+}
+
+.dis-head {
+  font-size: 4rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  color: orangered;
+  align-items: center;
+}
+
+.dis-body {
+  font-size: 2rem;
+}
+
+.description-container {
+  margin-left: 10rem;
+  display: flex;
+  margin-top: 7rem;
+}
+
+.description-image {
+  margin-left: 20px;
+  margin-top: 3rem;
+}
+
+.register-button {
+  padding: 0.5rem 1.5rem;
+  background-color: #007bff;
+  color: white;
+  font-size: 1.5rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 1rem;
+  margin-right: 30rem;
+}
+
+.register-button:hover {
+  background-color: #0c753a;
+}
+
+.menu-icon {
+  cursor: pointer;
+  display: none;
+  justify-content: space-around;
+  flex-direction: column;
+  height: 24px;
+  width: 24px;
+  position: relative;
+  z-index: 101;
+}
+
+.bar {
+  height: 3px;
+  width: 100%;
+  background-color: #ee1044;
+  transition: 0.3s ease;
+}
+
+.menu-links {
+  display: flex;
+  flex-direction: row;
+}
+
+.menu-links li {
+  display: block; /* Show the list items */
+}
+
+.menu-links.open li {
+  display: none; /* Hide the list items when the menu is closed on smaller screens */
+}
+
+/* Responsive styles for screens with a maximum width of 768px */
+@media screen and (max-width: 768px) {
+  .dis-head {
+    font-size: 3rem;
+  }
+
+  .dis-body {
+    font-size: 1.8rem;
+  }
+
+  .register-button {
+    font-size: 1.3rem;
+  }
+
+  .menu-icon {
+    display: none;
+  }
+
+  .navmenu {
+    display: flex;
+    align-items: center;
+  }
+
+  .menu-links {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+  }
+}
+
+/* Responsive styles for screens with a maximum width of 1024px */
+@media screen and (max-width: 768px) {
+  .main-nav {
+    grid-template-columns: 5rem 1fr 1fr 5rem;
+  }
+
+  .heading {
+    grid-column: 2/4;
+    justify-content: center;
+    margin-left: 0;
+  }
+
+  .navmenu {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 100%;
+    background-color: #f4f4f4;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease-in-out;
+    transform: translateX(100%);
+  }
+
+
+  .navmenu ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    margin-right: 0;
+    margin-bottom: 2rem;
+  }
+  .menu-links {
+    display: none;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .menu-links li {
+    margin-bottom: 20px;
+  }
+ 
+  .navmenu ul li {
+    margin: 1rem 0;
+  }
+
+  .navmenu ul li a {
+    font-size: 2rem;
+  }
+
+  .description-container {
+    flex-direction: column;
+    margin-left: 0;
+    margin-top: 2rem;
+  }
+
+  .discription {
+    max-width: 100%;
+    margin: 2rem;
+  }
+
+  .register-button {
+    margin: 2rem auto;
+    margin-right: 0;
+  }
+
+  .description-image {
+    margin-left: 0;
+    margin-top: 2rem;
+    max-width: 100%;
+  }
+  
+  
+}

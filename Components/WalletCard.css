@@ -1,0 +1,119 @@
+body{
+    background-color: rgb(255, 255, 255);
+}
+.walletCard {
+    /* Add your desired styles for the wallet card here */
+    /* For example: */
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 15px 20px rgba(0, 0, 0, 0.3);
+    width: 90%; /* Change to your desired width */
+  height: 700px; /* Change to your desired height */
+  display: flex;
+  max-width: 600px;
+  flex-direction: column;
+  gap: 10px;
+    background-image: url('https://image.slidesdocs.com/responsive-images/background/orange-business-wave-gradient-abstract-creative-powerpoint-background_5156022840__960_540.jpg');
+    background-size: cover;
+  background-position: top;
+
+  /* Increase the font size for elements inside the box */
+  font-size: 16px;
+  margin: auto;
+  }
+  .walletCard h4{
+    margin-left: 11rem;
+    color: rgb(241, 148, 26);
+    font-size: 2rem;
+  }
+  .metalogo{
+    margin-left: 16rem;
+  }
+  .walletCard button {
+    font-size: 20px; /* Change to your desired font size */
+    padding: 10px 20px; /* Adjust padding to increase button size */
+    background-color:transparent; /* Set the default background color */
+    color: rgb(199, 20, 20); /* Set the default text color */
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+   
+  }
+  
+  /* Add styles for the button when hovering */
+  .walletCard button:hover {
+    background-color: #f0a52e; /* Set the background color when hovering */
+  }
+  /* Centering styles */
+  .accountDisplay h3{
+    margin-top: 1rem;
+  color: rgb(227, 40, 71); /* Change to your desired color */
+}
+.balanceDisplay h3 {
+  margin-top: 0.5rem;
+  color: rgb(235, 34, 75); /* Change to your desired color */
+}
+  .center-wrapper {
+    /* Center the content both horizontally and vertically */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* Set the height to the full viewport height */
+    height: 100vh;
+    width: 100%;
+    background-image: url('https://img.freepik.com/premium-vector/orange-abstract-background_318204-113.jpg');
+  /* Set the background image size and positioning as per your preference */
+  background-size: cover;
+  background-position: center;
+  padding: 20px 0;
+  }
+ .buttonWrapper{
+  display: flex;
+  justify-content: center;
+  /* Add margin-right to move the button a bit to the right */
+  margin-right: 12px;
+  margin:0 auto;
+  
+  
+}
+.nextbutton{
+  margin-top: 0.5rem;
+ 
+}
+
+@media screen and (max-width: 768px) {
+  .metalogo {
+    /* Adjust margin for smaller screens */
+    margin-left: 10rem;
+  }
+
+  .walletCard h4 {
+    /* Adjust font size for smaller screens */
+    font-size: 1.5rem;
+  }
+
+  .walletCard button {
+    /* Adjust font size for smaller screens */
+    font-size: 18px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .metalogo {
+    /* Adjust margin for smaller screens */
+    margin-left:3rem;
+  }
+
+  .walletCard h4 {
+    /* Adjust font size for smaller screens */
+    font-size: 1.5rem;
+    margin-left: 2.8rem;
+  }
+
+  .walletCard button {
+    /* Adjust font size for smaller screens */
+    font-size: 18px;
+  }
+}
+
+
