@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { ethers } from "ethers";
 import "./WalletCard.css";
-import UserUpload from "./UserUpload"; // Import the UserUpload component
+
 
 const WalletCard = () => {
   const [errorMessage, setErrorMessage] = useState(null);
@@ -10,7 +10,7 @@ const WalletCard = () => {
   const [connButtonText, setConnButtonText] = useState("Connect Wallet");
   const [showUserUpload, setShowUserUpload] = useState(false);
   const [nextButtonClicked, setNextButtonClicked] = useState(false); // Add state to track if "Next" button was clicked
-  const [isImageUploaded, setIsImageUploaded] = useState(false);
+  
   useEffect(() => {
     // Set up event listeners only once when the component mounts
     if (window.ethereum && window.ethereum.isMetaMask) {
@@ -81,6 +81,7 @@ const WalletCard = () => {
         setErrorMessage(error.message);
       });
   };
+  
 
   const chainChangedHandler = () => {
     // reload the page to avoid any errors with chain change mid use of application
@@ -96,9 +97,7 @@ const WalletCard = () => {
     setShowUserUpload(false); // Hide the UserUpload component when "Cancel" is clicked
     setNextButtonClicked(false); // Set the state to indicate that the "Next" button is not clicked anymore
   };
-  const handleImageUpload = () => {
-    setIsImageUploaded(true);
-  };
+ 
 
   return (
     <div className="center-wrapper">
@@ -135,7 +134,11 @@ const WalletCard = () => {
         )}
 
         {/* Display UserUpload component when showUserUpload is true */}
-        {showUserUpload && <UserUpload />}
+       {showUserUpload && (
+        window.open(
+          "https://script.google.com/macros/s/AKfycbw2E6jZophvHEw9xVkzM94HhOjq5hysqdkBCQwk1Du1c0wBeiBCeyDwa0umnQRqzaqL/exec"
+        )
+      )}
 
         {errorMessage}
       </div>

@@ -6,6 +6,7 @@ import Content from "./Content";
 import OfficerLogin from "./OfficerLogin";
 import UserRegistration from "./UserRegistration";
 import AboutUs from "./AboutUs";
+import WalletCard from "./WalletCard";
 
 const Navbar = ({ onUserLogin }) => {
   // const [isUserLoggedIn, setIsUserLoggedIn] = useState(false);
@@ -38,11 +39,9 @@ const Navbar = ({ onUserLogin }) => {
               <a href="/aboutus">About us</a>
             </li>
             <li>
-              <div className="navbutton">
-                <button className="button" onClick={handleAdminLogin}>
-                  User login
-                </button>
-              </div>
+              
+                <a href="/user-login">User login</a>
+               
             </li>
           </ul>
         </div>
@@ -52,6 +51,7 @@ const Navbar = ({ onUserLogin }) => {
         <Route path="/officers-login" element={<OfficerLogin />} />
         <Route path="/users-registration" element={<UserRegistration />} />
         <Route path="/aboutus" element={<AboutUs />} />
+        <Route path="/user-login" element={<WalletCard/>} />
       </Routes>
     </div>
   );

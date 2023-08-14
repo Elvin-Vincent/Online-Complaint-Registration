@@ -7,9 +7,9 @@ body{
     background-color: #ffffff;
     padding: 20px;
     border-radius: 8px;
-    box-shadow: 0 15px 20px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
     width: 90%; /* Change to your desired width */
-  height: 700px; /* Change to your desired height */
+  height: 600px; /* Change to your desired height */
   display: flex;
   max-width: 600px;
   flex-direction: column;
@@ -60,9 +60,9 @@ body{
     justify-content: center;
     align-items: center;
     /* Set the height to the full viewport height */
-    height: 100vh;
+    height: 100%;
     width: 100%;
-    background-image: url('https://img.freepik.com/premium-vector/orange-abstract-background_318204-113.jpg');
+    
   /* Set the background image size and positioning as per your preference */
   background-size: cover;
   background-position: center;
