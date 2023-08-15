@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import { Route, Routes, Navigate } from "react-router-dom";
+import React from "react";
+import { Route, Routes } from "react-router-dom";
 
 import "./navbar.css";
 import Content from "./Content";
@@ -10,12 +10,9 @@ import WalletCard from "./WalletCard";
 
 const Navbar = ({ onUserLogin }) => {
   // const [isUserLoggedIn, setIsUserLoggedIn] = useState(false);
-  const [menuOpen, setMenuOpen] = useState(false);
+  
 
-  const handleAdminLogin = () => {
-    // setIsUserLoggedIn(true);
-    onUserLogin();
-  };
+  
 
   return (
     <div>
@@ -30,18 +27,18 @@ const Navbar = ({ onUserLogin }) => {
               <a href="/">Home</a>
             </li>
             <li>
+              
+                <a href="/user-login">New Complaint</a>
+               
+            </li>
+            <li>
               <a href="/officers-login">Officer login</a>
             </li>
             <li>
-              <a href="/users-registration">User Registration</a>
+              <a href="/user-registration">User registration</a>
             </li>
             <li>
               <a href="/aboutus">About us</a>
-            </li>
-            <li>
-              
-                <a href="/user-login">User login</a>
-               
             </li>
           </ul>
         </div>
@@ -49,8 +46,8 @@ const Navbar = ({ onUserLogin }) => {
       <Routes>
         <Route index element={<Content />} />
         <Route path="/officers-login" element={<OfficerLogin />} />
-        <Route path="/users-registration" element={<UserRegistration />} />
-        <Route path="/aboutus" element={<AboutUs />} />
+        <Route path="/user-registration" element={<UserRegistration />} />
+        <Route path="/aboutus" element={<AboutUs/>} />
         <Route path="/user-login" element={<WalletCard/>} />
       </Routes>
     </div>

@@ -27,6 +27,7 @@ function OfficerLogin() {
       (username === "example2@gmail.com" && password === "password")
     ) {
       setIsLoggedIn(true); // Set isLoggedIn to true upon successful login
+      
     } else {
       setErrorMessage("Invalid Username or Password. Please try again.");
     }
@@ -78,10 +79,11 @@ function OfficerLogin() {
       
       
       <Routes>
+
         {isLoggedIn && <Route path="/officers-content" element={<OfficerContent />} />}
       </Routes>
+      {isLoggedIn && <Navigate to="/officers-content"/>}
       
-      {isLoggedIn && <Navigate to="/officers-content" /> } 
     </div>
   );
 }
