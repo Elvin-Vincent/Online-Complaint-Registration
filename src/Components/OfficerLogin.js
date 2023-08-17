@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Routes, Route, Navigate } from "react-router-dom";
+
 import './OfficerLogin.css'
 import OfficerContent from "./OfficerContent";
 
@@ -34,57 +34,62 @@ function OfficerLogin() {
   };
 
   return (
-    <div className="box">
-      <div className="inner-box">
-        <div className="forms-wrap">
-          <form onSubmit={handleSubmit} className="sign-in-form" id="card">
-            <div className="heading">
-              <h2>OFFICERS LOGIN</h2>
-            </div>
-            <div className="actual-form">
-              <div className="input-wrap">
-                <input
-                  type="text"
-                  minLength="4"
-                  className="input-field"
-                  autoComplete="off"
-                  required
-                  id="username"
-                  value={username}
-                  placeholder="Username"
-                  onChange={handleInputChange}
-                />
+    <>
+    {
+      isLoggedIn?(
+        <OfficerContent />
+        
+        
+      ):(
+        <div className="container">
+        <div className="box">
+        <div className="inner-box">
+          <div className="forms-wrap">
+            <form onSubmit={handleSubmit} className="sign-in-form" id="card">
+              <div className="heading">
+                <h2>OFFICERS LOGIN</h2>
               </div>
-              <div className="input-wrap">
-                <input
-                  type="password"
-                  minLength="4"
-                  className="input-field"
-                  autoComplete="off"
-                  required
-                  id="password"
-                  value={password}
-                  placeholder="Password"
-                  onChange={handleInputChange}
-                />
+              <div className="actual-form">
+                <div className="input-wrap">
+                  <input
+                    type="text"
+                    minLength="4"
+                    className="input-field"
+                    autoComplete="off"
+                    required
+                    id="username"
+                    value={username}
+                    placeholder="Username"
+                    onChange={handleInputChange}
+                  />
+                </div>
+                <div className="input-wrap">
+                  <input
+                    type="password"
+                    minLength="4"
+                    className="input-field"
+                    autoComplete="off"
+                    required
+                    id="password"
+                    value={password}
+                    placeholder="Password"
+                    onChange={handleInputChange}
+                  />
+                </div>
+                <input type="submit" value="Sign In" className="sign-btn" />
               </div>
-              <input type="submit" value="Sign In" className="sign-btn" />
-            </div>
-          </form>
-          <p id="errorMessage" className="error">
-            {errorMessage}
-          </p>
+            </form>
+            <p id="errorMessage" className="error">
+              {errorMessage}
+            </p>
+          </div>
         </div>
-      </div>
-      
-      
-      <Routes>
-
-        {isLoggedIn && <Route path="/officers-content" element={<OfficerContent />} />}
-      </Routes>
-      {isLoggedIn && <Navigate to="/officers-content"/>}
-      
-    </div>
+        </div>
+        </div>
+      )
+    }
+    </>
+   
   );
 }
 

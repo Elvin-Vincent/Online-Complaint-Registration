@@ -32,7 +32,7 @@ main {
   }
 
   .box {
-    margin: 10rem auto;
+    margin: 9rem auto;
     max-width: 600px;
     width: 100%;
     height: 500px;
@@ -195,15 +195,23 @@ main.sign-up-mode .forms-wrap {
   font-size: 1.6rem;
 }
 
-@media (max-width: 850px) {
-    .box {
-      margin: 0 auto;
-      border-radius: 2rem;
-     
-    }
+@media (max-width: 768px) {
+  /* Adjust styles for smaller screens */
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10rem;
+  }
+    
+  .box {
+    width: 90%; /* Adjust width for better mobile layout */
+    margin: 0 auto; /* Center the box horizontally */
+  }
   
     .inner-box {
       padding: 2rem;
+      margin-top: 5rem;
 
     }
   
@@ -211,6 +219,7 @@ main.sign-up-mode .forms-wrap {
       position: revert;
       width: 100%;
       height: auto;
+      
     }
   
     form {
@@ -222,11 +231,17 @@ main.sign-up-mode .forms-wrap {
 }
 
 @media (max-width: 530px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
   main {
     padding: 1rem;
   }
 
   .box {
+   
     border-radius: 2rem;
   }
 
@@ -244,5 +259,16 @@ main.sign-up-mode .forms-wrap {
 
   form {
     padding: 1rem 2rem 1.5rem;
+  }
+}
+@keyframes shake {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  10%, 30%, 50%, 70%, 90% {
+    transform: translateX(-10px);
+  }
+  20%, 40%, 60%, 80% {
+    transform: translateX(10px);
   }
 }

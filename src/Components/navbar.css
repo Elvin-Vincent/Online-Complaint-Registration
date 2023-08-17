@@ -80,7 +80,7 @@ li {
   height: 2px;
   background-color: #ee1044;
   transform: scaleX(0);
-  transform-origin: bottom left;
+  transform-origin: bottom center;
   transition: transform 0.3s ease;
 }
 
@@ -236,6 +236,7 @@ li {
     justify-content: center;
     transition: transform 0.3s ease-in-out;
     transform: translateX(100%);
+    overflow-y: hidden;
   }
 
 

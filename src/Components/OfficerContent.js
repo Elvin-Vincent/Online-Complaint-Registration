@@ -1,9 +1,26 @@
 import React from "react";
+import './OfficerContent.css';
 
 function OfficerContent() {
   return (
     <div>
-      <h2>Welcome to Officer Content</h2>
+      <div className="head">
+      <h1> Officer Dashboard</h1>
+      </div>
+      <ul className="list" >
+        <li>
+          view profile
+        </li>
+        <li>
+          view new Complaint
+        </li>
+        <li>
+          view complaint history
+        </li>
+        <li>
+          view feedback
+        </li>
+      </ul>
      
     </div>
   );

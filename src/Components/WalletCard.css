@@ -6,7 +6,7 @@ body{
     /* For example: */
     background-color: #ffffff;
     padding: 20px;
-    border-radius: 8px;
+    border-radius: 3.3rem;
     box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
     width: 90%; /* Change to your desired width */
   height: 600px; /* Change to your desired height */
@@ -20,7 +20,8 @@ body{
 
   /* Increase the font size for elements inside the box */
   font-size: 16px;
-  margin: auto;
+  margin-top: 4rem;
+  
   }
   .walletCard h4{
     margin-left: 11rem;

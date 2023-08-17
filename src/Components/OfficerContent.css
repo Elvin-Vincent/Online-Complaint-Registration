@@ -1,0 +1,53 @@
+/* OfficerContent.css */
+/* OfficerContent.css */
+
+/* Heading Styles */
+.head h1 {
+    margin-top: 5rem;
+    font-size: 4rem;
+    color: #e21e1e;
+    padding: 20px;
+    margin-left: 10rem;
+
+}
+
+  
+  /* List Styles */
+  .list li {
+
+    margin-bottom: 10px;
+    margin-left: 5rem;
+    padding: 10px;
+    background-color: #f4f4f4;
+    border-radius: 5px;
+    text-align: center; /* Center the text within the boxes */
+    color: rgb(0, 0, 0);
+    transition: background-color 0.3s;
+    max-width: 50rem;
+  }
+  
+  .list li:hover {
+    background-color: #ddd;
+    cursor: pointer;
+    color: rgb(51, 131, 19);
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .list li {
+      margin-left: 2rem; /* Decrease the left margin for smaller screens */
+      max-width: 100%; /* Set max-width to 100% for responsiveness */
+    }
+  }
+  @media (max-width: 480px) {
+    .head h1 {
+      font-size: 2rem;
+    }
+    .list li {
+      margin-left: 0.25rem;
+      margin-right: 0.25rem;
+      max-width: calc(100% - 0.5rem);
+    }
+  }
+  
+  
