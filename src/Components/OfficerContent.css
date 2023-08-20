@@ -1,53 +1,154 @@
 /* OfficerContent.css */
-/* OfficerContent.css */
 
 /* Heading Styles */
-.head h1 {
-    margin-top: 5rem;
-    font-size: 4rem;
-    color: #e21e1e;
-    padding: 20px;
-    margin-left: 10rem;
-
+.head {
+  display: flex;
+  margin-top: 2rem;
+  
+ 
 }
 
-  
-  /* List Styles */
-  .list li {
+.head h1 {
+  font-size: 4rem;
+  color: #e21e1e;
+  text-transform: uppercase;
+}
 
-    margin-bottom: 10px;
-    margin-left: 5rem;
-    padding: 10px;
-    background-color: #f4f4f4;
-    border-radius: 5px;
-    text-align: center; /* Center the text within the boxes */
-    color: rgb(0, 0, 0);
-    transition: background-color 0.3s;
-    max-width: 50rem;
+/* Rest of your styles... */
+
+/* List Styles */
+.navigation-list {
+  
+  width: 300px; /* Adjust the width as needed */
+  height: 550px; /* Adjust the height as needed */
+  margin-top: 5rem;
+  background-color: #f7f7f7;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+  
+}
+
+
+
+
+.navigation-list li {
+  margin-bottom: 10px;
+  margin-left: 5px;
+  padding: 10px;
+  background-color:  #f7f7f7;
+  border-radius: 5px;
+  text-align: center;
+  color: rgb(0, 0, 0);
+  transition: background-color 0.3s;
+}
+
+.navigation-list li:hover {
+  background-color: #cccce3;
+  cursor: pointer;
+  
+}
+.logout {
+  margin-top: 30rem;
+}
+  
+ 
+
+
+.officer-content {
+  display: flex;
+ 
+}
+
+
+.content {
+ 
+  background-color: #e21e1e;
+  width: 1200px;
+  margin-top: 10rem;
+  
+  height: 600px;
+  
+}
+
+
+
+/* Adjust the navigation list styles as needed */
+
+
+/* Rest of your existing styling for .navigation-list, .new-complaints, etc. */
+
+
+
+
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .officer-content {
+    flex-direction: column; /* Stack items vertically on smaller screens */
+  }
+
+  .sidebar {
+    width: 100%; /* Occupy full width on smaller screens */
+  }
+
+  .content {
+    width: 100%; /* Occupy full width on smaller screens */
   }
   
-  .list li:hover {
-    background-color: #ddd;
-    cursor: pointer;
-    color: rgb(51, 131, 19);
+  .head {
+    justify-content: center; /* Center the heading horizontally */
+  }
+  .head h1 {
+    font-size: 3rem; /* Adjust font size for smaller screens */
+  }
+  .navigation-list {
+    width: 100%; /* Adjust width for smaller screens */
+    height: auto; /* Allow the container to adjust its height */
+    margin-top: 3rem; /* Adjust margin for smaller screens */
+  }
+  .navigation-list li {
+    margin-left: 1rem; /* Adjust left margin for smaller screens */
+    margin-right: 1rem; /* Adjust right margin for smaller screens */
+  }
+  .logout {
+    margin-top: 2rem; /* Adjust margin for smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .officer-content {
+    flex-direction: column; /* Stack items vertically on smaller screens */
+  }
+
+  .head {
+    text-align: center; /* Center the heading horizontally */
+    margin-top: 2rem; /* Add some spacing from the top */
+  }
+
+  .sidebar {
+    width: 100%; /* Occupy full width on smaller screens */
+    margin-top: 1rem; /* Add some spacing from the top */
+  }
+
+  .content {
+    width: 100%; /* Occupy full width on smaller screens */
+    margin-top: 1rem; /* Add some spacing from the top */
   }
   
-  /* Responsive adjustments */
-  @media (max-width: 768px) {
-    .list li {
-      margin-left: 2rem; /* Decrease the left margin for smaller screens */
-      max-width: 100%; /* Set max-width to 100% for responsiveness */
-    }
+  .head h1 {
+    font-size: 2.5rem; /* Adjust font size for even smaller screens */
   }
-  @media (max-width: 480px) {
-    .head h1 {
-      font-size: 2rem;
-    }
-    .list li {
-      margin-left: 0.25rem;
-      margin-right: 0.25rem;
-      max-width: calc(100% - 0.5rem);
-    }
+  .navigation-list {
+    width: 100%; /* Adjust width for even smaller screens */
+    height: auto; /* Allow the container to adjust its height */
+    margin-top: 2rem; /* Adjust margin for even smaller screens */
   }
-  
-  
+  .navigation-list li {
+    margin-left: 0.5rem; /* Adjust left margin for even smaller screens */
+    margin-right: 0.5rem; /* Adjust right margin for even smaller screens */
+  }
+  .logout {
+    margin-top: 1rem; /* Adjust margin for even smaller screens */
+  }
+}

@@ -12,10 +12,12 @@
     "@thirdweb-dev/sdk": "^3.10.40",
     "bootstrap": "^5.3.1",
     "ethers": "^5.7.2",
+    "googleapis": "^126.0.0",
     "react": "^18.2.0",
     "react-bootstrap": "^2.8.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.15.0",
+    "url": "^0.11.1",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
