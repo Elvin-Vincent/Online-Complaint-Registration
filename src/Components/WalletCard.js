@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { ethers } from "ethers";
 import "./WalletCard.css";
+import { Route, Routes, useNavigate } from "react-router-dom";
+import UploadImage from "./UploadImage";
 
 
 const WalletCard = () => {
@@ -8,23 +10,20 @@ const WalletCard = () => {
   const [defaultAccount, setDefaultAccount] = useState(null);
   const [userBalance, setUserBalance] = useState(null);
   const [connButtonText, setConnButtonText] = useState("Connect Wallet");
-  const [showUserUpload, setShowUserUpload] = useState(false);
-  const [nextButtonClicked, setNextButtonClicked] = useState(false); // Add state to track if "Next" button was clicked
-  
+
   useEffect(() => {
     // Set up event listeners only once when the component mounts
     if (window.ethereum && window.ethereum.isMetaMask) {
       // Listen for account changes
       window.ethereum.on("accountsChanged", accountChangedHandler);
 
-      // Listen for chain changes
+      
       window.ethereum.on("chainChanged", chainChangedHandler);
     }
 
-    // Clean up the event listeners when the component unmounts
+    
     return () => {
       if (window.ethereum && window.ethereum.isMetaMask) {
-        // Use removeListener instead of off
         window.ethereum.removeListener(
           "accountsChanged",
           accountChangedHandler
@@ -65,7 +64,6 @@ const WalletCard = () => {
     }
   };
 
-  // update account, will cause component re-render
   const accountChangedHandler = (newAccount) => {
     setDefaultAccount(newAccount);
     getAccountBalance(newAccount.toString());
@@ -81,23 +79,19 @@ const WalletCard = () => {
         setErrorMessage(error.message);
       });
   };
-  
 
   const chainChangedHandler = () => {
-    // reload the page to avoid any errors with chain change mid use of application
+  
     window.location.reload();
   };
 
-  const handleNextButtonClick = () => {
-    setShowUserUpload(true); // Display the UserUpload component when "Next" is clicked
-    setNextButtonClicked(true); // Set the state to indicate that the "Next" button was clicked
-  };
+  const navigate = useNavigate(); // Get the navigate function from React Router
 
-  const handleCancelButtonClick = () => {
-    setShowUserUpload(false); // Hide the UserUpload component when "Cancel" is clicked
-    setNextButtonClicked(false); // Set the state to indicate that the "Next" button is not clicked anymore
+  const handleNextButtonClick = () => {
+    
+    navigate("/UploadImage"); // Navigate to the /uploadImage route
+    
   };
- 
 
   return (
     <div className="center-wrapper">
@@ -117,32 +111,25 @@ const WalletCard = () => {
           <h3>Balance: {userBalance}</h3>
         </div>
 
-        {/* Connect Wallet button inside the box */}
         <div className="buttonWrapper">
           <button onClick={connectWalletHandler}>{connButtonText}</button>
         </div>
 
-        {/* Render the "Next" button only if there is a value in defaultAccount */}
-        {defaultAccount && !nextButtonClicked ? (
+        {defaultAccount ? (
           <button className="nextbutton" onClick={handleNextButtonClick}>
             Next
           </button>
         ) : (
-          <button className="nextbutton" onClick={handleCancelButtonClick}>
+          <button className="nextbutton" >
             Cancel
           </button>
         )}
 
-        {/* Display UserUpload component when showUserUpload is true */}
-       {showUserUpload && (
-        window.open(
-          "https://script.google.com/macros/s/AKfycbw2E6jZophvHEw9xVkzM94HhOjq5hysqdkBCQwk1Du1c0wBeiBCeyDwa0umnQRqzaqL/exec"
-        )
-      )}
-
         {errorMessage}
       </div>
+    
     </div>
+
   );
 };
 

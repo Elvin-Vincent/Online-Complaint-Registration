@@ -7,6 +7,7 @@ import OfficerLogin from "./OfficerLogin";
 import UserRegistration from "./UserRegistration";
 import AboutUs from "./AboutUs";
 import WalletCard from "./WalletCard";
+import UploadImage from "./UploadImage";
 
 const Navbar = ({ onUserLogin }) => {
   // const [isUserLoggedIn, setIsUserLoggedIn] = useState(false);
@@ -49,6 +50,7 @@ const Navbar = ({ onUserLogin }) => {
         <Route path="/user-registration" element={<UserRegistration />} />
         <Route path="/aboutus" element={<AboutUs/>} />
         <Route path="/user-login" element={<WalletCard/>} />
+        <Route path="/UploadImage" element={<UploadImage />} />
       </Routes>
     </div>
   );
