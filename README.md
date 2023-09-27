@@ -5,4 +5,4 @@ Before running the project, make sure you have the following dependencies instal
 
 Node.js , Metamask
 
-https://6511971c51dc692ae7f8b642--thriving-narwhal-dcc73d.netlify.app/
+https://6514471752191b0493fdd54a--capable-gnome-51a91a.netlify.app/
