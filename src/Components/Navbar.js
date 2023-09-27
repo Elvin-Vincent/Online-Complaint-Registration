@@ -8,6 +8,7 @@ import UserRegistration from "./UserRegistration";
 import AboutUs from "./AboutUs";
 import WalletCard from "./WalletCard";
 import UploadImage from "./UploadImage";
+import logo from './logo.png';
 
 const Navbar = ({ onUserLogin }) => {
   // const [isUserLoggedIn, setIsUserLoggedIn] = useState(false);
@@ -42,6 +43,10 @@ const Navbar = ({ onUserLogin }) => {
               <a href="/aboutus">About us</a>
             </li>
           </ul>
+          <div >
+      <img className="image" src={logo} alt="Logo" />
+    </div>
+
         </div>
       </nav>
       <Routes>
