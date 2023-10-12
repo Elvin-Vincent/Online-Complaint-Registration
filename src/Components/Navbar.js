@@ -4,7 +4,7 @@ import { Route, Routes } from "react-router-dom";
 import "./navbar.css";
 import Content from "./Content";
 import OfficerLogin from "./OfficerLogin";
-import UserRegistration from "./UserRegistration";
+
 import AboutUs from "./AboutUs";
 import WalletCard from "./WalletCard";
 import UploadImage from "./UploadImage";
@@ -36,9 +36,7 @@ const Navbar = ({ onUserLogin }) => {
             <li>
               <a href="/officers-login">Officer login</a>
             </li>
-            <li>
-              <a href="/user-registration">User registration</a>
-            </li>
+           
             <li>
               <a href="/aboutus">About us</a>
             </li>
@@ -52,7 +50,7 @@ const Navbar = ({ onUserLogin }) => {
       <Routes>
         <Route index element={<Content />} />
         <Route path="/officers-login" element={<OfficerLogin />} />
-        <Route path="/user-registration" element={<UserRegistration />} />
+       
         <Route path="/aboutus" element={<AboutUs/>} />
         <Route path="/user-login" element={<WalletCard/>} />
         <Route path="/UploadImage" element={<UploadImage />} />

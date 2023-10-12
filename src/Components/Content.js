@@ -16,7 +16,7 @@ export default function Content() {
               any personal information about yourself.
             </p>
           </div>
-          <button className="register-button">Register Now</button>
+          <button className="register-button">New Complaint</button>
         </div>
         <img
           src="https://blog-assets.freshworks.com/freshdesk/wp-content/uploads/2021/02/17214252/Illustration-detailing-customer-service-experience-1024x536.png"
